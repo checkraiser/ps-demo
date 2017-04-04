@@ -9,6 +9,7 @@ import Halogen as H
 import Halogen.HTML as HH
 import Halogen.HTML.Properties as HP
 import Halogen.HTML.Events as HE
+import Interest (calculateInterest) as I
 
 
 type State = {  randNum :: Maybe Number
@@ -46,10 +47,12 @@ ui =
   renderRandomButton state =
     let
       value = maybe "No number generated yet" show state.randNum
+      interest = maybe "No number generated yet" show (I.calculateInterest `map` state.randNum)
     in
       HH.div_ $
         [ HH.h1_ [ HH.text "Random number" ]
         , HH.p_ [ HH.text ("Current value: " <> value) ]
+        , HH.p_ [ HH.text ("Interest: " <> interest )]
         , HH.button
             [ HE.onClick (HE.input_ Regenerate) ]
             [ HH.text "Generate new number" ]
