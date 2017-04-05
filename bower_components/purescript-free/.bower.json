@@ -1,0 +1,46 @@
+{
+  "name": "purescript-free",
+  "homepage": "https://github.com/purescript/purescript-free",
+  "description": "Free, Cofree, Yoneda, Coyoneda, Trampoline",
+  "authors": [
+    "Eric Thul <thul.eric@gmail.com>",
+    "Brian McKenna <brian@brianmckenna.org>",
+    "John A. De Goes <john@degoes.net> (http://degoes.net)",
+    "Gary Burgess <gary.burgess@gmail.com>",
+    "Phil Freeman <paf31@cantab.net>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-free.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-catenable-lists": "^3.0.0",
+    "purescript-exists": "^2.0.0",
+    "purescript-inject": "^3.0.0",
+    "purescript-transformers": "^2.0.0",
+    "purescript-unsafe-coerce": "^2.0.0"
+  },
+  "devDependencies": {
+    "purescript-console": "^2.0.0"
+  },
+  "version": "3.5.1",
+  "_release": "3.5.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.5.1",
+    "commit": "e3d58a2f00d560a621fc9a85c1b4dc12a954ef1c"
+  },
+  "_source": "https://github.com/purescript/purescript-free.git",
+  "_target": "^3.5.1",
+  "_originalSource": "purescript-free"
+}

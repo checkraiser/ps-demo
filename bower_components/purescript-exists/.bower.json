@@ -1,0 +1,35 @@
+{
+  "name": "purescript-exists",
+  "homepage": "https://github.com/purescript/purescript-exists",
+  "description": "Existential types as a library",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-exists.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-unsafe-coerce": "^2.0.0"
+  },
+  "devDependencies": {
+    "purescript-console": "^2.0.0"
+  },
+  "version": "2.0.0",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.0.0",
+    "commit": "fc8fa02ae69b8952d0eef23ab0f7b8b7a95c9994"
+  },
+  "_source": "https://github.com/paf31/purescript-exists.git",
+  "_target": "^2.0.0",
+  "_originalSource": "purescript-exists"
+}

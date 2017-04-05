@@ -1,0 +1,47 @@
+{
+  "name": "purescript-css",
+  "authors": [
+    "Brian McKenna <brian@brianmckenna.org>"
+  ],
+  "description": "PureScript CSS preprocessor",
+  "keywords": [
+    "purescript",
+    "css"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slamdata/purescript-css.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-generics": "^3.1.0",
+    "purescript-nonempty": "^3.0.0",
+    "purescript-profunctor": "^2.0.0",
+    "purescript-strings": "^2.0.2",
+    "purescript-these": "^2.0.0",
+    "purescript-transformers": "^2.0.1",
+    "purescript-colors": "^2.0.0",
+    "purescript-console": "^2.0.0"
+  },
+  "devDependencies": {
+    "purescript-exceptions": "^2.0.0"
+  },
+  "homepage": "https://github.com/slamdata/purescript-css",
+  "version": "2.1.0",
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.0",
+    "commit": "411cc2c4bf27f3cd9d5bb6f913b429986ebeb0d0"
+  },
+  "_source": "https://github.com/slamdata/purescript-css.git",
+  "_target": "^2.1.0",
+  "_originalSource": "purescript-css"
+}
