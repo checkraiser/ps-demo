@@ -45,8 +45,8 @@ ui =
   render :: State -> H.ComponentHTML Query
   render state =
     HH.div [HP.class_ muiContainer] $
-      [
-        HH.div [HP.class_ muiPanel] [renderRandomButton state]
+      [ HH.div [HP.id_ "map"] []        
+      , HH.div [HP.class_ muiPanel] [renderRandomButton state]
       , HH.div [HP.class_ muiPanel] [renderGithub state      ]
       ]
 

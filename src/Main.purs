@@ -8,10 +8,12 @@ import Data.Maybe (Maybe(..))
 import Halogen.Aff as HA
 import Network.HTTP.Affjax as AX
 import Halogen.VDom.Driver (runUI)
+import Halogen as H
 import Control.Monad.Eff.Random (RANDOM)
 import Component as UI
+import GoogleMap (GOOGLE, initMap)
 
-main :: Eff (HA.HalogenEffects (random :: RANDOM, ajax :: AX.AJAX, console :: CONSOLE)) Unit
+main :: Eff (HA.HalogenEffects (google :: GOOGLE, random :: RANDOM, ajax :: AX.AJAX, console :: CONSOLE)) Unit
 main = HA.runHalogenAff do
   body <- HA.awaitBody
   io <- runUI UI.ui unit body
@@ -19,3 +21,5 @@ main = HA.runHalogenAff do
   io.subscribe $ CR.consumer \(UI.Toggled newState) -> do
     log $ "Button was toggled to: " <> show newState
     pure Nothing
+
+  H.liftEff initMap
