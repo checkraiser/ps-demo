@@ -34,7 +34,7 @@ data Query a = Regenerate a
              | MakeRequest a
 
 data Message = Toggled Boolean   
-             | RerenderMap     
+             | RerenderMap Boolean
 
 type Input = Unit     
 
@@ -113,8 +113,8 @@ ui =
       newNumber <- H.liftEff random
       state <- H.get
       H.modify (_ { randNum = Just newNumber, buttonState = not state.buttonState })
-      H.raise $ Toggled state.buttonState
-      H.raise $ RerenderMap 
+      H.raise $ Toggled state.buttonState      
+      H.raise $ RerenderMap (shouldRender state)
       pure next
     SetUsername username next -> do 
       H.modify (_ { username = username, result = Nothing :: Maybe String })

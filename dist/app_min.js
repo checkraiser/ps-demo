@@ -7496,10 +7496,12 @@ var PS = {};
       return Toggled;
   })();
   var RerenderMap = (function () {
-      function RerenderMap() {
-
+      function RerenderMap(value0) {
+          this.value0 = value0;
       };
-      RerenderMap.value = new RerenderMap();
+      RerenderMap.create = function (value0) {
+          return new RerenderMap(value0);
+      };
       return RerenderMap;
   })();
   var shouldRender = function (st) {
@@ -7582,7 +7584,7 @@ var PS = {};
                           return $20;
                       }))(function () {
                           return Control_Bind.bind(Halogen_Query_HalogenM.bindHalogenM)(Halogen_Query_HalogenM.raise(new Toggled(v2.buttonState)))(function () {
-                              return Control_Bind.bind(Halogen_Query_HalogenM.bindHalogenM)(Halogen_Query_HalogenM.raise(RerenderMap.value))(function () {
+                              return Control_Bind.bind(Halogen_Query_HalogenM.bindHalogenM)(Halogen_Query_HalogenM.raise(new RerenderMap(shouldRender(v2))))(function () {
                                   return Control_Applicative.pure(Halogen_Query_HalogenM.applicativeHalogenM)(v.value0);
                               });
                           });
@@ -9098,11 +9100,17 @@ var PS = {};
                   });
               };
               if (x instanceof Component.RerenderMap) {
-                  return Control_Bind.bind(Control_Monad_Aff.bindAff)(Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(GoogleMap.initMap))(function () {
+                  if (x.value0) {
+                      return Control_Bind.bind(Control_Monad_Aff.bindAff)(Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(GoogleMap.initMap))(function () {
+                          return Control_Applicative.pure(Control_Monad_Aff.applicativeAff)(Data_Maybe.Nothing.value);
+                      });
+                  };
+                  if (!x.value0) {
                       return Control_Applicative.pure(Control_Monad_Aff.applicativeAff)(Data_Maybe.Nothing.value);
-                  });
+                  };
+                  throw new Error("Failed pattern match at Main line 26, column 7 - line 30, column 19: " + [ x.value0.constructor.name ]);
               };
-              throw new Error("Failed pattern match at Main line 21, column 36 - line 27, column 12: " + [ x.constructor.name ]);
+              throw new Error("Failed pattern match at Main line 21, column 36 - line 30, column 19: " + [ x.constructor.name ]);
           }));
       });
   }));

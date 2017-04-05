@@ -22,8 +22,11 @@ main = HA.runHalogenAff do
     UI.Toggled newState -> do 
       log $ "Button was toggled to: " <> show newState
       pure Nothing  
-    UI.RerenderMap -> do 
-      H.liftEff initMap
-      pure Nothing
+    UI.RerenderMap t -> do 
+      if t 
+        then do
+          H.liftEff initMap
+          pure Nothing 
+        else pure Nothing
     
   
