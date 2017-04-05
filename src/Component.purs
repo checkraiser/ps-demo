@@ -19,13 +19,22 @@ type State = {  randNum :: Maybe Number
               , buttonState :: Boolean
               }
 
+shouldRender :: State -> Boolean
+shouldRender st = case tmp of 
+                    Just true -> true 
+                    _         -> false
+  where tmp = goodEnough `map` st.randNum
+        goodEnough :: Number -> Boolean 
+        goodEnough n = n > 0.5
+
 data AddQuery a = Add Number Number a 
 
 data Query a = Regenerate a
              | SetUsername String a
              | MakeRequest a
 
-data Message = Toggled Boolean        
+data Message = Toggled Boolean   
+             | RerenderMap     
 
 type Input = Unit     
 
@@ -45,10 +54,13 @@ ui =
   render :: State -> H.ComponentHTML Query
   render state =
     HH.div [HP.class_ muiContainer] $
-      [ HH.div [HP.id_ "map"] []        
+      [ renderGoogleMap state
       , HH.div [HP.class_ muiPanel] [renderRandomButton state]
       , HH.div [HP.class_ muiPanel] [renderGithub state      ]
       ]
+
+  renderGoogleMap st = if tmp then HH.div [HP.id_ "map"] [] else HH.div [] []
+    where tmp = shouldRender st
 
   renderRandomButton :: State -> H.ComponentHTML Query
   renderRandomButton state =
@@ -102,6 +114,7 @@ ui =
       state <- H.get
       H.modify (_ { randNum = Just newNumber, buttonState = not state.buttonState })
       H.raise $ Toggled state.buttonState
+      H.raise $ RerenderMap 
       pure next
     SetUsername username next -> do 
       H.modify (_ { username = username, result = Nothing :: Maybe String })

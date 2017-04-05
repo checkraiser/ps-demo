@@ -18,8 +18,12 @@ main = HA.runHalogenAff do
   body <- HA.awaitBody
   io <- runUI UI.ui unit body
 
-  io.subscribe $ CR.consumer \(UI.Toggled newState) -> do
-    log $ "Button was toggled to: " <> show newState
-    pure Nothing
-
-  H.liftEff initMap
+  io.subscribe $ CR.consumer \x -> case x of 
+    UI.Toggled newState -> do 
+      log $ "Button was toggled to: " <> show newState
+      pure Nothing  
+    UI.RerenderMap -> do 
+      H.liftEff initMap
+      pure Nothing
+    
+  
