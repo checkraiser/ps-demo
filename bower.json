@@ -9,13 +9,14 @@
     "dist"
   ],
   "dependencies": {
-    "purescript-halogen": "*",
-    "purescript-random": "^2.0.0",
-    "purescript-affjax": "*",
-    "purescript-css": "*",
-    "purescript-halogen-css": "*"
+    "purescript-halogen": "1.2.1",
+    "purescript-random": "2.0.0",
+    "purescript-affjax": "3.0.2",
+    "purescript-css": "2.1.0",
+    "purescript-halogen-css": "5.0.0",
+    "purescript-d3": "https://github.com/checkraiser/purescript-d3"
   },
   "devDependencies": {
-    "purescript-psci-support": "^3.0.0"
+    "purescript-psci-support": "3.0.0"
   }
 }

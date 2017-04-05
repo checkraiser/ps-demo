@@ -42,6 +42,6 @@
     "commit": "411cc2c4bf27f3cd9d5bb6f913b429986ebeb0d0"
   },
   "_source": "https://github.com/slamdata/purescript-css.git",
-  "_target": "^2.1.0",
+  "_target": "2.1.0",
   "_originalSource": "purescript-css"
 }

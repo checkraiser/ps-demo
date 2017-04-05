@@ -29,6 +29,6 @@
     "commit": "4be576753b6c7fa2cab0b3807b28f2fa379bab2a"
   },
   "_source": "https://github.com/purescript/purescript-random.git",
-  "_target": "^2.0.0",
+  "_target": "2.0.0",
   "_originalSource": "purescript-random"
 }

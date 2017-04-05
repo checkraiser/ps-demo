@@ -23,10 +23,8 @@ main = HA.runHalogenAff do
       log $ "Button was toggled to: " <> show newState
       pure Nothing  
     UI.RerenderMap t -> do 
-      if t 
-        then do
-          H.liftEff initMap
-          pure Nothing 
-        else pure Nothing
+      log $ "Result: " <> show t 
+      H.liftEff initMap
+      pure Nothing
     
   
