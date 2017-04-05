@@ -1,0 +1,55 @@
+{
+  "name": "purescript-halogen",
+  "homepage": "https://github.com/slamdata/purescript-halogen",
+  "authors": [
+    "Gary Burgess <gary.burgess@gmail.com>",
+    "John A. De Goes <john@degoes.net>",
+    "Phil Freeman <paf31@cantab.net>",
+    "Jon Sterling <jon@jonmsterling.com>"
+  ],
+  "description": "A declarative, type-safe UI library for PureScript",
+  "keywords": [
+    "purescript",
+    "halogen",
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slamdata/purescript-halogen.git"
+  },
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "purescript-aff": "^2.0.3",
+    "purescript-const": "^2.0.0",
+    "purescript-coroutines": "^3.1.0",
+    "purescript-dom": "^3.7.0",
+    "purescript-dom-indexed": "^2.0.0",
+    "purescript-foreign": "^3.2.0",
+    "purescript-fork": "^1.1.0",
+    "purescript-free": "^3.5.1",
+    "purescript-freeap": "^2.0.0",
+    "purescript-halogen-vdom": "^1.0.4",
+    "purescript-maps": "^2.1.2",
+    "purescript-media-types": "^2.0.0",
+    "purescript-nullable": "^2.0.0",
+    "purescript-parallel": "^2.1.0",
+    "purescript-profunctor": "^2.0.0",
+    "purescript-profunctor-lenses": "^2.6.0",
+    "purescript-unsafe-coerce": "^2.0.0",
+    "purescript-unsafe-reference": "^1.0.0"
+  },
+  "devDependencies": {
+    "purescript-ace": "^3.0.0",
+    "purescript-aff-coroutines": "^4.0.0",
+    "purescript-affjax": "^3.0.2",
+    "purescript-random": "^2.0.0",
+    "purescript-websocket-simple": "^1.0.1",
+    "purescript-reflection": "^2.0.0"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "purescript-halogen-vdom",
+  "homepage": "https://github.com/slamdata/purescript-halogen-vdom",
+  "authors": [
+    "Nathan Faubion <nathan@n-son.com>"
+  ],
+  "description": "An extensible virtial-dom library for PureScript",
+  "keywords": [
+    "purescript",
+    "halogen",
+    "virtual-dom"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slamdata/purescript-halogen-vdom.git"
+  },
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^2.1.0",
+    "purescript-eff": "^2.0.0",
+    "purescript-tuples": "^3.0.0",
+    "purescript-dom": "^3.3.0",
+    "purescript-maps": "^2.0.1",
+    "purescript-maybe": "^2.0.1",
+    "purescript-unsafe-coerce": "^2.0.0",
+    "purescript-bifunctors": "^2.0.0",
+    "purescript-refs": "^2.0.0",
+    "purescript-foreign": "^3.0.1"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^2.0.0",
+    "purescript-js-timers": "^2.0.0",
+    "purescript-exists": "^2.0.0"
+  },
+  "version": "1.0.4",
+  "_release": "1.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.4",
+    "commit": "87f145aae4a540706b2d545e1d2feb1f1f7c65b8"
+  },
+  "_source": "https://github.com/slamdata/purescript-halogen-vdom.git",
+  "_target": "^1.0.4",
+  "_originalSource": "purescript-halogen-vdom"
+}

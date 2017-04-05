@@ -1,0 +1,8 @@
+{
+  "name": "ace",
+  "private": true,
+  "dependencies": {
+    "purescript-ace": "^3.0.0",
+    "purescript-halogen": "*"
+  }
+}
