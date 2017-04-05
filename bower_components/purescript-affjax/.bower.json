@@ -48,6 +48,6 @@
     "commit": "071ca67b3535bd20e33b0765251c35a67278d77f"
   },
   "_source": "https://github.com/slamdata/purescript-affjax.git",
-  "_target": "*",
+  "_target": "3.0.2",
   "_originalSource": "purescript-affjax"
 }

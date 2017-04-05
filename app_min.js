@@ -9100,17 +9100,13 @@ var PS = {};
                   });
               };
               if (x instanceof Component.RerenderMap) {
-                  if (x.value0) {
+                  return Control_Bind.bind(Control_Monad_Aff.bindAff)(Control_Monad_Aff_Console.log("Result: " + Data_Show.show(Data_Show.showBoolean)(x.value0)))(function () {
                       return Control_Bind.bind(Control_Monad_Aff.bindAff)(Control_Monad_Eff_Class.liftEff(Control_Monad_Aff.monadEffAff)(GoogleMap.initMap))(function () {
                           return Control_Applicative.pure(Control_Monad_Aff.applicativeAff)(Data_Maybe.Nothing.value);
                       });
-                  };
-                  if (!x.value0) {
-                      return Control_Applicative.pure(Control_Monad_Aff.applicativeAff)(Data_Maybe.Nothing.value);
-                  };
-                  throw new Error("Failed pattern match at Main line 26, column 7 - line 30, column 19: " + [ x.value0.constructor.name ]);
+                  });
               };
-              throw new Error("Failed pattern match at Main line 21, column 36 - line 30, column 19: " + [ x.constructor.name ]);
+              throw new Error("Failed pattern match at Main line 21, column 36 - line 28, column 12: " + [ x.constructor.name ]);
           }));
       });
   }));

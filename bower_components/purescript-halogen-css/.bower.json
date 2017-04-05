@@ -33,6 +33,6 @@
     "commit": "721ac8948163f83b0d71162d4899337bddf0bbb0"
   },
   "_source": "https://github.com/slamdata/purescript-halogen-css.git",
-  "_target": "*",
+  "_target": "5.0.0",
   "_originalSource": "purescript-halogen-css"
 }

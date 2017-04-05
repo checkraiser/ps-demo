@@ -26,7 +26,6 @@
     "commit": "2450b870446d369e43c050afa3205c439568ee1c"
   },
   "_source": "https://github.com/purescript/purescript-psci-support.git",
-  "_target": "^3.0.0",
-  "_originalSource": "purescript-psci-support",
-  "_direct": true
+  "_target": "3.0.0",
+  "_originalSource": "purescript-psci-support"
 }
