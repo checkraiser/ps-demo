@@ -38,6 +38,6 @@
     "commit": "4776cdd91199e6abe8162a4b002bc6473cc1d208"
   },
   "_source": "https://github.com/purescript/purescript-generics.git",
-  "_target": "^3.1.0",
+  "_target": "^3.0.0",
   "_originalSource": "purescript-generics"
 }

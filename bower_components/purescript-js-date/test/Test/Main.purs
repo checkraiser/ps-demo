@@ -4,7 +4,6 @@ import Prelude
 
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (CONSOLE, log)
-import Control.Monad.Except (runExcept)
 
 import Data.DateTime as DT
 import Data.Enum (toEnum)
@@ -25,7 +24,7 @@ main :: forall eff. Eff (console :: CONSOLE, assert :: ASSERT, locale :: JSD.LOC
 main = do
 
   log "Check IsForeign intance will read JS date values..."
-  assert $ isRight $ runExcept $ read myDate :: F JSD.JSDate
+  assert $ isRight $ read myDate :: F JSD.JSDate
 
   log "Checking that a UTC date constructed with sensible values is valid..."
   assert $ JSD.isValid $ JSD.jsdate defaultDateRecord
