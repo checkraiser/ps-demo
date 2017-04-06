@@ -1,0 +1,34 @@
+{
+  "name": "purescript-d3",
+  "description": "PureScript bindings for D3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pelotom/purescript-d3.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "docsrc",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "d3": "^3.4.9",
+    "purescript-easy-ffi": "^2.0.0",
+    "purescript-foreign": "^1.0.0",
+    "purescript-js-date": "^1.1.0"
+  },
+  "main": "src/**/*.purs",
+  "private": false,
+  "homepage": "https://github.com/pelotom/purescript-d3",
+  "version": "0.8.1",
+  "_release": "0.8.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.8.1",
+    "commit": "b0647bddb58c79680e058c1bf0e7b69d9eeb7985"
+  },
+  "_source": "https://github.com/pelotom/purescript-d3.git",
+  "_target": "0.8.1",
+  "_originalSource": "purescript-d3"
+}
